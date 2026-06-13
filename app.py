@@ -5,14 +5,15 @@ from io import BytesIO
 
 from PIL import Image
 
-from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import (
-    Conv2D,
-    MaxPooling2D,
-    Flatten,
-    Dense
-)
+import keras
+from keras.models import Sequential
+from keras.layers import Conv2D, MaxPooling2D, Flatten, Dense
 
+import os
+os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
+os.environ["MKL_NUM_THREADS"] = "1"
+os.environ["NUMEXPR_NUM_THREADS"] = "1"
+os.environ["OMP_NUM_THREADS"] = "1"
 
 BASE_URL = (
     "https://raw.githubusercontent.com/"
