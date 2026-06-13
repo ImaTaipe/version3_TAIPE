@@ -28,7 +28,7 @@ def cargar_dataset():
 
     # GATOS
 
-    for i in range(1, 21):
+    for i in range(1, 14):
 
         url = f"{BASE_URL}/gatos/gato{i}.jpg"
 
@@ -59,7 +59,7 @@ def cargar_dataset():
 
     # PERROS
 
-    for i in range(1, 21):
+    for i in range(1, 14):
 
         url = f"{BASE_URL}/perros/perro{i}.jpg"
 
